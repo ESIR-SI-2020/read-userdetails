@@ -1,4 +1,4 @@
-package models;
+package fr.esir.jxc.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
