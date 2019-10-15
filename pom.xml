@@ -8,6 +8,13 @@
     <artifactId>read-userdetails</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+
+        <java.version>1.8</java.version>
+        <spring-elasticsearch.version>3.0.14.RELEASE</spring-elasticsearch.version>
+        <elasticsearch.version>5.6.0</elasticsearch.version>
+    </properties>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -18,6 +25,28 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-elasticsearch</artifactId>
+            <version>${spring-elasticsearch.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>${elasticsearch.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>transport</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch.plugin</groupId>
+            <artifactId>transport-netty4-client</artifactId>
         </dependency>
     <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -34,18 +63,7 @@
             <artifactId>lombok</artifactId>
             <version>1.18.10</version>
         </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>provided</scope>
-        </dependency>
     </dependencies>
-
-<properties>
-<java.version>1.8</java.version>
-</properties>
-
 
 <build>
 <plugins>
@@ -55,5 +73,4 @@
     </plugin>
 </plugins>
 </build>
-
 </project>
