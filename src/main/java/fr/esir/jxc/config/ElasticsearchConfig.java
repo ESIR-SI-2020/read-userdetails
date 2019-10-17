@@ -18,8 +18,8 @@ import java.net.InetAddress;
 @EnableElasticsearchRepositories(basePackages = "fr.esir.jxc.repositories")
 public class ElasticsearchConfig {
 
-    @Value("${elasticsearch.home:C:/Programmes/elasticsearch-5.6.0}")
-    private String elasticsearchHome;
+//    @Value("${elasticsearch.home:C:/Programmes/elasticsearch-5.6.0}")
+//    private String elasticsearchHome;
 
     @Value("${elasticsearch.clustername:pocket-cluster}")
     private String clusterName;
@@ -33,7 +33,7 @@ public class ElasticsearchConfig {
     @Bean
     public Client client() throws Exception{
         Settings settings = Settings.builder()
-                .put("path.home", elasticsearchHome)
+//                .put("path.home", elasticsearchHome)
                 .put("cluster.name", clusterName)
                 .build();
         TransportClient transportClient = new PreBuiltTransportClient(settings);
