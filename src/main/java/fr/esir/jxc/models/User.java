@@ -27,5 +27,4 @@ public class User {
     @Field(type = FieldType.Object)
     private Address address;
     private List<String> friendsId;
-
 }
